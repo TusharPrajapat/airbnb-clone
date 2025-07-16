@@ -5,15 +5,17 @@ const Schema = mongoose.Schema;
 const listingSchema = new Schema({
   title: {
     type: String,
-    require: true,
+    required: true,
   },
   description: String,
   image: {
-    type: String,
-    set: () =>
-      v === ""
-        ? "https://unsplash.com/photos/a-modern-home-office-with-framed-art-and-an-aquarium-yYEiSC3opvM"
-        : v,
+    //did updation according to our data.js file
+    filename: String,
+    url: {
+      type: String,
+      default:
+        "https://unsplash.com/photos/a-modern-home-office-with-framed-art-and-an-aquarium-yYEiSC3opvM",
+    },
   },
   price: Number,
   location: String,
@@ -23,5 +25,7 @@ const listingSchema = new Schema({
 //CREATING MODEL ---> Listing
 const Listing = mongoose.model("Listing", listingSchema);
 
-//EXPORTING (listing.js ---> app.js)
+//EXPORTING (listing.js -----> app.js)
+//                        |
+//                        ---> index.js)
 module.exports = Listing;
