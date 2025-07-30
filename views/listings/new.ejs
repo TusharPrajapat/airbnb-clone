@@ -7,6 +7,7 @@
     <br />
     <form method="post" action="/listings" novalidate class="needs-validation">
       <div class="mb-3">
+        <!-- Title -->
         <label for="title" class="form-label">Title</label>
         <input
           name="listing[title]"
@@ -18,6 +19,7 @@
         <div class="valid-feedback">Title looks Good!</div>
       </div>
 
+      <!-- Description -->
       <div class="mb-3">
         <label for="description" class="form-label">description</label>
         <textarea
@@ -28,6 +30,7 @@
         <div class="invalid-feedback">Please enter a short description</div>
       </div>
 
+      <!-- Image -->
       <div class="mb-3">
         <label for="image" class="form-label">Image Link</label>
         <input
@@ -38,6 +41,7 @@
         />
       </div>
 
+      <!-- Price -->
       <div class="row">
         <div class="mb-3 col-md-4">
           <label for="price" class="form-label">price</label>
@@ -50,6 +54,7 @@
           <div class="invalid-feedback">Price should be valid.</div>
         </div>
 
+        <!-- Country -->
         <div class="mb-3 col-md-8">
           <label for="country" class="form-label">country</label>
           <input
@@ -63,6 +68,7 @@
         </div>
       </div>
 
+      <!-- Location -->
       <div class="mb-3">
         <label for="price" class="form-label">location</label>
         <input

@@ -32,8 +32,10 @@
     <!-- Inlcuding navbar -->
     <%- include('../includes/navbar.ejs') %>
 
-    <!-- <h1>This is my Travel Website</h1> -->
-    <div class="container"><%- body %></div>
+    <!-- Including flash -->
+    <div class="container">
+      <%- include('../includes/flash.ejs') %> <%- body %>
+    </div>
 
     <!-- Inlcuding footer -->
     <%- include('../includes/footer.ejs') %>
