@@ -72,9 +72,9 @@ app.use((req, res, next) => {
 });
 
 //ROOT
-app.get("/", (req, res) => {
-  res.send("Welcome to root");
-});
+// app.get("/", (req, res) => {
+//   res.send("Welcome to root");
+// });
 
 app.get("/Demo", async (req, res) => {
   let fakeUser = new User({
